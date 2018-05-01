@@ -9,16 +9,12 @@ class TodoItem extends Component {
     // }
 
     render() {
-        return <li className={this.props.complete ? 'strikethrough' : null}>{this.props.text}</li>;
+        return <li>{this.props.text}</li>;
     }
 }
 
 TodoItem.propTypes = {
     text: PropTypes.string.isRequired
-};
-
-TodoItem.defaultProps = {
-    text: 'No item :('
 };
 
 export default TodoItem;
