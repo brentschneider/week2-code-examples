@@ -19,11 +19,15 @@ export class Todolist extends Component {
         });
     }
 
-    addItem(item) {
+    addItem = () => {
         this.setState((prevState, props) => {
-
             const items = prevState.items;
-            items.push(item);
+            const item = prevState.inputText;
+            if (item) {
+                items.push(item);
+            } else {
+                alert('You should enter an item! 😉');
+            }
 
             return {
                 items: items,
@@ -46,7 +50,8 @@ export class Todolist extends Component {
                         value={this.state.inputText}
                     />
                     <button
-                        onClick={() => this.addItem(this.state.inputText)}
+                        disabled={this.state.inputText === ''}
+                        onClick={this.addItem}
                     >Add Item</button>
                 </div>
                 <ul>

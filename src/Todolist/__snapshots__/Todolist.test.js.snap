@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todolist component change the input 1`] = `
+<div>
+  <h1>
+    Todo List
+  </h1>
+  <div>
+    <input
+      onChange={[Function]}
+      value="new value"
+    />
+    <button
+      disabled={false}
+      onClick={[Function]}
+    >
+      Add Item
+    </button>
+  </div>
+  <ul />
+</div>
+`;
+
+exports[`Todolist component should render 1`] = `
+<div>
+  <h1>
+    Todo List
+  </h1>
+  <div>
+    <input
+      onChange={[Function]}
+      value=""
+    />
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      Add Item
+    </button>
+  </div>
+  <ul />
+</div>
+`;
